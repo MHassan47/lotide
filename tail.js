@@ -13,3 +13,4 @@ const tail = function (array) {
 const words = ["Yo Yo", "Lighthouse", "Labs"];
 console.log(tail(words));
 assertEqual(words.length, 3);
+module.exports = tail

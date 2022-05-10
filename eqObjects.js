@@ -23,6 +23,7 @@ const eqObjects = function (object1, object2) {
     }
   }
 };
+module.exports = eqObjects
 
 // test code 1
 const ab = { a: "1", b: "2" };
