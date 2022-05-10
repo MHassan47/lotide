@@ -1,5 +1,8 @@
 const words = ["ground", "control", "to", "major", "tom"];
 
+const assertArraysEqual = require('./assertArraysEqual')
+
+
 const map = function(array, callback) {
   const results = [];
   for (let item of array) {
@@ -11,15 +14,6 @@ const map = function(array, callback) {
 const results1 = map(words, (x) => x[0]);
 console.log(results1);
 
-const assertArraysEqual = function (array1, array2) {
-  if (array1 === array2) {
-    console.log(`✅✅✅ Assertion Passed: ${array1} === ${array2}`);
-  }
-  if (array1 !== array2) {
-    console.log(`🛑🛑🛑 Assertion Failed: ${array1} !== ${array2}`);
-  }
-};
-console.log(assertArraysEqual(results1,[ 'g', 'c', 't', 'm', 't' ] ));
 
 const eqArrays = function (array1, array2) {
   if (array1.length !== array2.length) {
@@ -32,4 +26,7 @@ const eqArrays = function (array1, array2) {
   }
   return true;
 };
+const eqArrays = require('./eqArrays')
+
+module.exports = map
 console.log(eqArrays(results1,[ 'g', 'c', 't', 'm', 't' ] ));
